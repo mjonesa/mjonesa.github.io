@@ -1,0 +1,33 @@
+*** this is linked to ****
+
+/var/www/mjonesa
+
+*** set tags/hash table for petsc *** 
+
+:set tags=/home/mjonesa/PETSc/petsc/tags
+
+
+***** visual block
+  CNTL-V
+
+
+********** $$$ **********
+#0  f1_field_u (u=0xbff110, gradU=0xbff770, a=0xc00ac0, gradA=0xc01120, x=0xbffde0, f1=0xbfe880)
+    at /home/mjonesa/PETSc/petsc/src/snes/examples/tutorials/ex12.c:157
+#1  0x00007ffff72dc847 in PetscFEIntegrateResidual_Basic (fem=0x77a490, Ne=48, Nf=1, fe=0x7fffffffda00, field=0, geom=...,
+    coefficients=0xbf74c0, NfAux=1, feAux=0x7fffffffda10, coefficientsAux=0xbfd9a0,
+    f0_func=0x40369a <f0_analytic_u(double const*, double const*, double const*, double const*, double const*, double*)>,
+    f1_func=0x403761 <f1_field_u(double const*, double const*, double const*, double const*, double const*, double*)>,
+    elemVec=0xbfc450) at /home/mjonesa/PETSc/petsc/src/dm/dt/interface/dtfe.c:2589
+#2  0x00007ffff72e8f77 in PetscFEIntegrateResidual (fem=0x77a490, Ne=48, Nf=1, fe=0x7fffffffda00, field=0, geom=...,
+    coefficients=0xbf74c0, NfAux=1, feAux=0x7fffffffda10, coefficientsAux=0xbfd9a0,
+    f0_func=0x40369a <f0_analytic_u(double const*, double const*, double const*, double const*, double const*, double*)>,
+    f1_func=0x403761 <f1_field_u(double const*, double const*, double const*, double const*, double const*, double*)>,
+    elemVec=0xbfc450) at /home/mjonesa/PETSc/petsc/src/dm/dt/interface/dtfe.c:4775
+#3  0x00007ffff71ffa06 in DMPlexComputeResidualFEM (dm=0x751940, X=0x83b6b0, F=0xbea9e0, user=0x7fffffffc960)
+    at /home/mjonesa/PETSc/petsc/src/dm/impls/plex/plexfem.c:607
+#4  0x00007ffff754f28c in SNESComputeFunction_DMLocal (snes=0x64cc50, X=0x7fc530, F=0x801370, ctx=0x81d060)
+    at /home/mjonesa/PETSc/petsc/src/snes/utils/dmlocalsnes.c:75
+#5  0x00007ffff75f4eba in SNESComputeFunction (snes=0x64cc50, x=0x7fc530, y=0x801370)
+    at /home/mjonesa/PETSc/petsc/src/snes/interface/snes.c:2089
+#6  0x000000000040b8b3 in main (argc=15, argv=0x7fffffffdb68) at /home/mjonesa/PETSc/petsc/src/snes/examples/tutorials/ex12.c:767

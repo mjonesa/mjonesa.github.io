@@ -1,0 +1,105 @@
+<html>
+
+<head title="Research of mjonesa at MDAnderson">
+
+
+
+<body>
+
+
+
+Hello World!
+
+<hr></hr>
+
+Links: <br>
+
+<a href="./data1.html">Data</a>
+<br>
+<a href="./notes.txt">Notes</a>
+<Br>
+<a href="http://www.mcs.anl.gov/petsc/petsc-current/docs/manualpages/singleindex.html">PETSc Routine Index</a>
+<br>
+<hr></hr>
+
+<h1>Useful commands for SCREEN</h1>
+ <a href="http://www.gnu.org/software/screen/manual/">GNU SCREEN</a>
+<br><br>
+
+Useful Intro: <a href="https://help.ubuntu.com/community/Screen">SCREEN INTRO</a>
+<br><br>
+[1] <code>screen -ls</code> <br>
+<br>
+Shows address of screen socket.
+<br><br>
+[2] <code>screen -rd [name of socket]</code> <br>
+<br>
+Opens up your saved session in [name of socket]
+<br><br>
+[3] <code>Ctrl-e</code> then <code>n</code> or <code>p</code>
+<br><br>
+Change between screens.
+
+<h1>Useful commands for gdb</h1>
+<a href="http://www.gnu.org/software/gdb/documentation/">GDB</a> 
+<br><br>
+To attach the Debugger to a program, use <code>gdb ./[filename] --args</code>
+<br><br>
+To produce a stack frame for examination, do (in the debugger):
+<br>
+<code>
+b [line#] <br>
+r <br>
+bt <br></code>
+<br><br>
+
+[1] <code>up</code> and <code>down</code> move in the stack frame. Just remember that the higher number called the routine in the frame below it. Or (#7 called #6, #6 called #5, #5 called #4, and so on).
+
+<h1>Useful commands for ctags</h1>
+
+In VIM (<code>vim [filename]</code>),
+<br><br>
+[1]<code> ':set tags="/[SRC_DIR]/tags" '</code>
+<br><br>
+Sets tag file
+<br><br>
+On a line in the code press,
+<br>
+[2] <code>g]</code> 
+<br><br>
+Prints places in source code where you find instances of the function on the line you were on. Select the number of the instance you would like to look at and press enter.
+<br><br>
+[3] <code>Ctrl-t</code>
+<br><br>
+Goes to last tagged instance.
+<br><br>
+[4]
+
+<h1>Useful commands for VIM</h1>
+To open the file you want to edit with vim, use <code>vim [filename]</code>
+<br><br>
+[1] <code>:sp</code>
+<br><br>
+Splits windows horizontally.
+<br><br>
+[2] <code>Ctrl-w </code>then <code>j</code> or <code>k</code> (up and down switching between screens)
+<br><br>
+[3] <code>/[search_term]</code>
+<br><br>
+Searches for <code>[search_term]</code>
+<br><br>
+When searching it may be useful to use the following command to tell VIM to ignore the case (case insensitive): <code>:set ic</code>
+<br><br>
+[4] <code>m[a,b,c,...(any char)]</code> (Marks that line for later use)
+<br><br>
+[5] <code>'[a,b,c,...(char that you marked)]</code> Look to [4]. This takes you to the line you marked. (Use apostrophe)
+<br><br>
+[6] <code>%</code> Mate command that finds end brackets
+
+<hr></hr>
+
+
+</body>
+</head>
+
+</html>
